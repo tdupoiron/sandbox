@@ -5,10 +5,7 @@ on:
 
   workflow_dispatch:
     inputs:
-      var_main_1:
-        required: true
-        type: string
-      var_main_2:
+      var_develop_1:
         required: true
         type: string
 
@@ -19,4 +16,4 @@ jobs:
     steps:
 
       - name: Run a one-line script
-        run: echo Hello, world, from main branch!
+        run: echo Hello, world, from develop branch!
