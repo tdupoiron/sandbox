@@ -4,6 +4,13 @@ name: Demo Workflow Dispatch
 on:
 
   workflow_dispatch:
+    inputs:
+      var_main_1:
+        required: true
+        type: string
+      var_main_2:
+        required: true
+        type: string
 
 jobs:
   build:
