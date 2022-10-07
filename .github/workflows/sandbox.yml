@@ -16,8 +16,11 @@ jobs:
     
     - name: GitHub Script
       uses: actions/github-script@v6.3.1
+      env:
+        name: thomas
       with:
         script: |
           console.log(JSON.stringify(github));
           console.log(JSON.stringify(github.ref));
           console.log(JSON.stringify(env));
+          console.log(JSON.stringify(runner));
