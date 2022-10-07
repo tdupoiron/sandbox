@@ -1,0 +1,18 @@
+name: Sandbox
+
+on:
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: GitHub Script
+      uses: actions/github-script@v6.3.1
+      with:
+        script: |
+          console.log(JSON.stringify(github));
+
+
