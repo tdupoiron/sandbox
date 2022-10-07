@@ -19,5 +19,5 @@ jobs:
       with:
         script: |
           console.log(JSON.stringify(github));
-
-
+          console.log(JSON.stringify(github.ref));
+          console.log(JSON.stringify(env));
