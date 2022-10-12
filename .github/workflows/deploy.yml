@@ -1,0 +1,21 @@
+name: Deploy to Azure
+
+on:
+  pull_request:
+    types: [ "labelled" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
+
+      - name: GitHub Script
+        uses: actions/github-script@v6.3.2
+        with:
+          script: |
+            console.log(JSON.stringify(github));

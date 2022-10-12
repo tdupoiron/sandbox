@@ -1,0 +1,19 @@
+
+name: Demo Workflow Dispatch
+
+on:
+
+  workflow_dispatch:
+    inputs:
+      var_develop_1:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Run a one-line script
+        run: echo Hello, world, from develop branch!
