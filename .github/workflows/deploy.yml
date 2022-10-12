@@ -38,5 +38,5 @@ jobs:
           slot-name: staging
 
       - run: |
-        docker build . -t ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
-        docker push ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
+          docker build . -t ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
+          docker push ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
