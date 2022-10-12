@@ -15,15 +15,15 @@ jobs:
         uses: actions/github-script@v6.3.2
         with:
           script: |
-            console.log(JSON.stringify(github));
-            console.log(JSON.stringify(github.event));
-            console.log(JSON.stringify(github.event.pull_request));
-            console.log(JSON.stringify(github.event.pull_request.labels));
-            console.log(JSON.stringify(github.event.pull_request.labels[0]));
-            console.log(JSON.stringify(github.event.pull_request.labels[0].name));
-            console.log(JSON.stringify(github.event.pull_request.labels[0].name) === "deploy");
+            console.log(JSON.stringify(${{github}}));
+            /*console.log(JSON.stringify(${{github.event}}));
+            console.log(JSON.stringify(${{github.event.pull_request}}));
+            console.log(JSON.stringify(${{github.event.pull_request.labels}}));
+            console.log(JSON.stringify(${{github.event.pull_request.labels[0]}}));
+            console.log(JSON.stringify(${{github.event.pull_request.labels[0].name}}));
+            console.log(JSON.stringify(${{github.event.pull_request.labels[0].name}}) === "deploy");
             if (JSON.stringify(github.event.pull_request.labels[0].name) === "deploy") {
               console.log("Deploying to Azure");
             } else {
               console.log("Not deploying to Azure");
-            }
+            }*/
