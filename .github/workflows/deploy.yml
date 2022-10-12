@@ -22,3 +22,10 @@ jobs:
         with:
           script: |
               console.log('Deploying to Azure...');
+
+      - name: Azure Login
+        uses: Azure/login@v1
+        if: github.event.label.name == 'deploy'
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
