@@ -2,7 +2,7 @@ name: Deploy to Azure
 
 on:
   pull_request:
-    types: [ "labelled" ]
+    types: [ "labeled" ]
 
 jobs:
   build:
@@ -19,3 +19,4 @@ jobs:
         with:
           script: |
             console.log(JSON.stringify(github));
+            console.log(JSON.stringify(github.event));
