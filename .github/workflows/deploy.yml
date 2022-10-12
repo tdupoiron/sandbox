@@ -33,8 +33,8 @@ jobs:
           slot-name: staging
 
       - run: |
-        docker build . -t ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
-        docker push ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
+        docker build . -t ${SECRETS_ACR_LOGIN_SERVER}/tdupoiron-demo:${{ github.sha }}
+        docker push ${SECRETS_ACR_LOGIN_SERVER}/tdupoiron-demo:${{ github.sha }}
 
       #- uses: azure/webapps-deploy@v2
       #  with:
