@@ -18,24 +18,7 @@ jobs:
 
       - name: GitHub Script
         uses: actions/github-script@v6.3.2
+        if: github.event.label.name == 'deploy'
         with:
           script: |
-            //console.log(JSON.stringify(context, null, 2));
-            console.log(JSON.stringify(github.rest, null, 2));
-            if (context.payload.label.name === 'deploy') {
-              console.log('Deploying to Azure...')
-            } else {
-              console.log('Not deploying to Azure...')
-            }
-
-            console.log(JSON.stringify(github, null, 2));
-            console.log(JSON.stringify(env, null, 2));
-            console.log(JSON.stringify(job, null, 2));
-            console.log(JSON.stringify(jobs, null, 2));
-            console.log(JSON.stringify(steps, null, 2));
-            console.log(JSON.stringify(runner, null, 2));
-            console.log(JSON.stringify(secrets, null, 2));
-            console.log(JSON.stringify(strategy, null, 2));
-            console.log(JSON.stringify(matrix, null, 2));
-            console.log(JSON.stringify(needs, null, 2));
-            console.log(JSON.stringify(inputs, null, 2));
+              console.log('Deploying to Azure...');
