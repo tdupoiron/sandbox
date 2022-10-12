@@ -3,6 +3,10 @@ name: Deploy to Azure
 on:
   pull_request:
     types: [ "labeled" ]
+  push:
+    branches:
+      - develop
+      - master
 
 jobs:
   build:
