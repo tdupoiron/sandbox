@@ -15,8 +15,8 @@ jobs:
         uses: actions/github-script@v6.3.2
         with:
           script: |
-            console.dir(${{github}});
-            console.dir(JSON.stringify(${{github.event}}));
+            console.table(${{github}});
+            /*console.dir(JSON.stringify(${{github.event}}));
             console.dir(JSON.stringify(${{github.event.pull_request}}));
             console.dir(JSON.stringify(${{github.event.pull_request.labels}}));
             console.dir(JSON.stringify(${{github.event.pull_request.labels[0]}}));
@@ -26,4 +26,4 @@ jobs:
               console.dir("Deploying to Azure");
             } else {
               console.dir("Not deploying to Azure");
-            }
+            }*/
