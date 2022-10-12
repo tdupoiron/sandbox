@@ -21,7 +21,7 @@ jobs:
         with:
           script: |
             //console.log(github.env);
-            console.log(${{github.env}});
+            console.log(JSON.stringify(${{github.env}}));
             /*console.dir(JSON.stringify(${{github.event}}));
             console.dir(JSON.stringify(${{github.event.pull_request}}));
             console.dir(JSON.stringify(${{github.event.pull_request.labels}}));
