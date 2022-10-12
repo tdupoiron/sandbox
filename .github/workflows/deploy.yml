@@ -20,16 +20,8 @@ jobs:
         uses: actions/github-script@v6.3.2
         with:
           script: |
-            //console.log(github.env);
-            console.log(JSON.stringify(${{github.env}}));
-            /*console.dir(JSON.stringify(${{github.event}}));
-            console.dir(JSON.stringify(${{github.event.pull_request}}));
-            console.dir(JSON.stringify(${{github.event.pull_request.labels}}));
-            console.dir(JSON.stringify(${{github.event.pull_request.labels[0]}}));
-            console.dir(JSON.stringify(${{github.event.pull_request.labels[0].name}}));
-            console.dir(JSON.stringify(${{github.event.pull_request.labels[0].name}}) === "deploy");
-            if (JSON.stringify(github.event.pull_request.labels[0].name) === "deploy") {
-              console.dir("Deploying to Azure");
+            if (context.payload.pull_request.labels.find(label => label.name === 'deploy')) {
+              console.log('Deploying to Azure...')
             } else {
-              console.dir("Not deploying to Azure");
-            }*/
+              console.log('Not deploying to Azure...')
+            }
