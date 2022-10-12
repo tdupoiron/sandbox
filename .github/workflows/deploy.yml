@@ -15,13 +15,6 @@ jobs:
         uses: actions/setup-node@v3.5.0
         with:
           node-version: 16
-
-      - name: GitHub Script
-        uses: actions/github-script@v6.3.2
-        if: github.event.label.name == 'deploy'
-        with:
-          script: |
-              console.log('Deploying to Azure...');
         
       - name: Azure Container Registry Login
         uses: Azure/docker-login@v1
@@ -31,10 +24,20 @@ jobs:
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
         
-      #- name: Azure WebApp
-      #  uses: Azure/webapps-deploy@v2
-      #  if: github.event.label.name == 'deploy'
+      - name: Azure WebApp
+        uses: Azure/webapps-deploy@v2
+        if: github.event.label.name == 'deploy'
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          images: ${{ secrets.ACR_LOGIN_SERVER }}/node-app:${{ github.sha }}
+          slot-name: staging
+
+      - run: |
+        docker build . -t ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
+        docker push ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
+
+      #- uses: azure/webapps-deploy@v2
       #  with:
-      #    app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
-      #    images: ${{ secrets.ACR_LOGIN_SERVER }}/node-app:${{ github.sha }}
-      #    slot-name: staging
+      #    app-name: 'node-rnc'
+      #    publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+      #    images: 'contoso.azurecr.io/nodejssampleapp:${{ github.sha }}'
