@@ -35,5 +35,5 @@ jobs:
       - name: Build and publish Docker image
         if: github.event.label.name == 'deploy'
         run: |
-          docker build . -t ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
+          docker build ./docker -t ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
           docker push ${{ secrets.ACR_LOGIN_SERVER }}/tdupoiron-demo:${{ github.sha }}
