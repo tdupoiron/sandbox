@@ -27,3 +27,15 @@ jobs:
             } else {
               console.log('Not deploying to Azure...')
             }
+
+            console.log(JSON.stringify(github, null, 2));
+            console.log(JSON.stringify(env, null, 2));
+            console.log(JSON.stringify(job, null, 2));
+            console.log(JSON.stringify(jobs, null, 2));
+            console.log(JSON.stringify(steps, null, 2));
+            console.log(JSON.stringify(runner, null, 2));
+            console.log(JSON.stringify(secrets, null, 2));
+            console.log(JSON.stringify(strategy, null, 2));
+            console.log(JSON.stringify(matrix, null, 2));
+            console.log(JSON.stringify(needs, null, 2));
+            console.log(JSON.stringify(inputs, null, 2));
