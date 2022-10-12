@@ -20,3 +20,4 @@ jobs:
           script: |
             console.log(JSON.stringify(github));
             console.log(JSON.stringify(github.event));
+            console.log(JSON.stringify(${github.event}));
