@@ -1,0 +1,26 @@
+name: Sandbox
+
+on:
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Checkout
+      uses: actions/checkout@v3.1.0
+
+    
+    - name: GitHub Script
+      uses: actions/github-script@v6.3.1
+      env:
+        name: thomas
+      with:
+        script: |
+          console.log(JSON.stringify(github));
+          console.log(JSON.stringify(github.ref));
+          //console.log(JSON.stringify(env));
+          console.log(JSON.stringify(runner));
