@@ -23,14 +23,6 @@ jobs:
           login-server: ${{ secrets.ACR_LOGIN_SERVER }}
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
-        
-      - name: Azure WebApp
-        uses: Azure/webapps-deploy@v2
-        if: github.event.label.name == 'deploy'
-        with:
-          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
-          images: ${{ secrets.ACR_LOGIN_SERVER }}/node-app:${{ github.sha }}
-          slot-name: staging
 
       - name: Build and publish Docker image
         if: github.event.label.name == 'deploy'
