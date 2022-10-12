@@ -11,11 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.0
+        with:
+          node-version: 16
+
       - name: GitHub Script
         uses: actions/github-script@v6.3.2
         with:
+          no
           script: |
-            console.debug(${{github}});
+            console.log(github.env);
+            console.log(${{github.env}});
             /*console.dir(JSON.stringify(${{github.event}}));
             console.dir(JSON.stringify(${{github.event.pull_request}}));
             console.dir(JSON.stringify(${{github.event.pull_request.labels}}));
