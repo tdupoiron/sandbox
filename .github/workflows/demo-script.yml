@@ -18,9 +18,6 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "🎉 You've created this issue comment using GitHub Script!!!"
-            })
+            const path = require('path')
+            const scriptPath = path.resolve('./.github/scripts/script.js')
+            console.log(require(scriptPath)({context}))
