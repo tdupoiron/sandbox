@@ -18,6 +18,10 @@ jobs:
           script: |
             console.log(context.issue);
             console.log(context.repo);
+
+      - name: install '@octokit/rest'
+        run: npm install @octokit/rest
+
       - uses: actions/github-script@v6.3.2
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
