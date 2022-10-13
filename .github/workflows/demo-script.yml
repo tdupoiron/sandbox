@@ -27,9 +27,11 @@ jobs:
               body: "🎉 You've created this issue comment using GitHub Script!!!"
             });
 
-            github.rest.projects.createCard({
+            console.log({{columnID}});
+
+            /*github.rest.projects.createCard({
               column_id: {{columnID}},
               note: "New comment in issue #{{issue.number}}",
               content_id: context.payload.issue.id,
               content_type: "Issue"
-            });
+            });*/
