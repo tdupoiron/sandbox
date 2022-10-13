@@ -20,10 +20,8 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.projects.createForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: "Demo Project"
+            github.rest.projects.createForAuthenticatedUser({
+              name: 'My Demo Project',
             });
 
             /*github.rest.issues.createComment({
