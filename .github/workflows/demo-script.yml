@@ -8,17 +8,24 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      
-      - uses: actions/github-script@v6.3.2
+      - uses: actions/github-script@v5
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "🎉 You've created this issue comment using GitHub Script!!!"
-            })
+            console.log(context);
+            console.log(context.repo);
+            console.log(context.issue);
+      
+      # - uses: actions/github-script@v6.3.2
+      #   with:
+      #     github-token: ${{secrets.GITHUB_TOKEN}}
+      #     script: |
+      #       github.rest.issues.createComment({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: "🎉 You've created this issue comment using GitHub Script!!!"
+      #       })
 
             # github.rest.projects.createCard({
             #   column_id: {{columnID}},
