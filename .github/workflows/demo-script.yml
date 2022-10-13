@@ -12,7 +12,8 @@ jobs:
         uses: actions/github-script@v6.3.2
         with:
           script: |
-            console.log(context.issue)
+            console.log(context.issue);
+            console.log(context.repo);
       - uses: actions/github-script@v6.3.2
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
