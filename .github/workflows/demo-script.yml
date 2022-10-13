@@ -8,6 +8,11 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
+      - name: Get metadata
+        uses: actions/github-script@v6.3.2
+        with:
+          script: |
+            console.log(context.issue)
       - uses: actions/github-script@v6.3.2
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
