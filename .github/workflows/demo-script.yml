@@ -18,7 +18,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const issueBody = fs.readFileSync(path.resolve(".github/ISSUE_COMMENT/comment.md", "utf8");
+            const issueBody = fs.readFileSync(".github/ISSUE_COMMENT/comment.md", "utf8");
             core.setOutput("issueBody", issueBody);
 
       - name: Dump GitHub context
