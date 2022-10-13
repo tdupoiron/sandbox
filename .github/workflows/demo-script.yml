@@ -28,7 +28,7 @@ jobs:
 
       - name: Add issue to project
         uses: actions/github-script@v5
-        if: github.event.issue.labels.*.name == 'chanteur'
+        if: contains(github.event.issue.labels.*.name, 'chanteur')
         with:
           github-token: ${{secrets.MY_PAT}}
           script: |
