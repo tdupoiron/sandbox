@@ -20,16 +20,20 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.issues.createComment({
+            github.rest.projects.createForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: "Demo Project"
+            });
+
+            /*github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: "🎉 You've created this issue comment using GitHub Script!!!"
             });
 
-            console.log({{columnID}});
-
-            /*github.rest.projects.createCard({
+            github.rest.projects.createCard({
               column_id: {{columnID}},
               note: "New comment in issue #{{issue.number}}",
               content_id: context.payload.issue.id,
