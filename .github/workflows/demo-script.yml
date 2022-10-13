@@ -36,7 +36,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'You have created this issue comment using GitHub Script'
+              body: 'You have created this issue comment using GitHub Script',
             })
 
             # github.rest.projects.createCard({
