@@ -28,6 +28,8 @@ jobs:
       - name: Create comment on issue
         uses: actions/github-script@v5
         if: github.event.action == 'opened'
+        env:
+          issue_body: ${{ steps.read_md.outputs.issueBody }}
         with:
           github-token: ${{secrets.MY_PAT}}
           script: |
@@ -35,7 +37,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: ${{steps.read_md.outputs.issueBody}}
+              body: env.issue_body
             });
 
       - name: Add issue to project
