@@ -2,15 +2,16 @@ name: Learning GitHub Script
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled, unlabeled]
 
 jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-    
+
       - name: Create comment on issue
         uses: actions/github-script@v5
+        if: github.event.issue.action == 'opened'
         with:
           github-token: ${{secrets.MY_PAT}}
           script: |
@@ -23,6 +24,7 @@ jobs:
 
       - name: Add issue to project
         uses: actions/github-script@v5
+        if: github.event.issue.labels.*.name == 'chanteur'
         with:
           github-token: ${{secrets.MY_PAT}}
           script: |
