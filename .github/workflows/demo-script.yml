@@ -30,7 +30,6 @@ jobs:
 
             github.rest.projects.createCard({
               column_id: 19203711,
-              note: "New comment in issue #{{issue.number}}",
               content_id: context.payload.issue.id,
               content_type: "Issue"
             });
