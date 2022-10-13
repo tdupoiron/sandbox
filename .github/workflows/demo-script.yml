@@ -9,6 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            console.log(github.event);
+
       - name: Create comment on issue
         uses: actions/github-script@v5
         if: github.event.issue.action == 'opened'
