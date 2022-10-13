@@ -35,7 +35,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: steps.read_md.outputs.issueBody
+              body: ${{steps.read_md.outputs.issueBody}}
             });
 
       - name: Add issue to project
