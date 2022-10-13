@@ -9,15 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/github-script@v5
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            console.log(context);
+      - name: Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
 
       - name: Create comment on issue
         uses: actions/github-script@v5
-        if: context.action == 'opened'
+        if: github.event.name == 'learning'
         with:
           github-token: ${{secrets.MY_PAT}}
           script: |
