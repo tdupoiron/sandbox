@@ -17,7 +17,7 @@ jobs:
 
       - name: Create comment on issue
         uses: actions/github-script@v5
-        if: github.event.issue.action == 'opened'
+        if: context.action == 'opened'
         with:
           github-token: ${{secrets.MY_PAT}}
           script: |
@@ -30,7 +30,7 @@ jobs:
 
       - name: Add issue to project
         uses: actions/github-script@v5
-        if: github.event.issue.labels.*.name == 'chanteur'
+        if: context.payload.issue.labels.*.name == 'chanteur'
         with:
           github-token: ${{secrets.MY_PAT}}
           script: |
