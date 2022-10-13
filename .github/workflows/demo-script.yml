@@ -13,7 +13,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(github.event);
+            console.log(context);
 
       - name: Create comment on issue
         uses: actions/github-script@v5
