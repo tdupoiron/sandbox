@@ -28,16 +28,16 @@ jobs:
             });
 
 
-      # - uses: actions/github-script@v6.3.2
-      #   with:
-      #     github-token: ${{secrets.GITHUB_TOKEN}}
-      #     script: |
-      #       github.rest.issues.createComment({
-      #         issue_number: context.issue.number,
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         body: "🎉 You've created this issue comment using GitHub Script!!!"
-      #       })
+      - uses: actions/github-script@v6.3.2
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🎉 You've created this issue comment using GitHub Script!!!''
+            })
 
             # github.rest.projects.createCard({
             #   column_id: {{columnID}},
