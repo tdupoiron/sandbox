@@ -20,11 +20,8 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.projects.createForAuthenticatedUser({
-              name: 'My Demo Project',
-            });
 
-            /*github.rest.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -32,8 +29,8 @@ jobs:
             });
 
             github.rest.projects.createCard({
-              column_id: {{columnID}},
+              column_id: 19203711,
               note: "New comment in issue #{{issue.number}}",
               content_id: context.payload.issue.id,
               content_type: "Issue"
-            });*/
+            });
