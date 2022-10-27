@@ -67,3 +67,6 @@ On multiple lines
 # Advanced formatting
 ## Colors
 The background color should be `#ffffff` for light mode and `#0d1117` for dark mode.
+
+## Links
+This [link](https://github.com/tdupoiron/sandbox/edit/main/markdown/README.md) is awesome
