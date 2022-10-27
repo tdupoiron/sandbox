@@ -70,3 +70,6 @@ The background color should be `#ffffff` for light mode and `#0d1117` for dark m
 
 ## Links
 This [link](https://github.com/tdupoiron/sandbox/edit/main/markdown/README.md) is awesome
+
+## Images
+[Octocat](https://myoctocat.com/assets/images/base-octocat.svg)
