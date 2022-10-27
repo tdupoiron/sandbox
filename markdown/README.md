@@ -41,11 +41,25 @@ _Same here, but using a single underscore character_
 \***text***
 ***All bold and italic***
 
+## Strikethrough
 \~~text~~
 ~~This is strikethrough text~~
 
+## Sub and Sup
 \<sub>text\</sub>
 <sub>This is a subscript text</sub>
 
 \<sup>text\</sup>
 <sup>This is a supscript text</sup>
+
+## Quoting
+\> text
+> This is a quote
+
+\`text\`
+Here is a `code snippet`
+\```text\```
+```
+Here is code gist
+On multiple lines
+```
