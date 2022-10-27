@@ -1,3 +1,5 @@
+# === Headings ===
+
 # The largest heading
 ## The second largest heading
 ### 3rd level
@@ -15,3 +17,24 @@
 ## Section 2.1
 ## Section 2.2
 ## Section 2.3
+
+# === Styling text ===
+## Bold
+
+\**text**
+**This is Bold text using the wildcard key**
+
+\__text__
+__This is also Bold text using underscores__
+
+## Italic
+\*text*
+*This text is italicized using a single wildcard key*
+
+\_text_
+_Same here, but using a single underscore character_
+
+## Bold and Italic
+\**\_text_**
+**Super _important_ text here**
+
