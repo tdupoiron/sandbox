@@ -38,3 +38,14 @@ _Same here, but using a single underscore character_
 \**\_text_**
 **Super _important_ text here**
 
+\***text***
+***All bold and italic***
+
+\~~text~~
+~~This is strikethrough text~~
+
+\<sub>text\</sub>
+<sub>This is a subscript text</sub>
+
+\<sup>text\</sup>
+<sup>This is a supscript text</sup>
