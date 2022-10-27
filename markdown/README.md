@@ -73,3 +73,22 @@ This [link](https://github.com/tdupoiron/sandbox/edit/main/markdown/README.md) i
 
 ## Images
 ![Octocat](https://myoctocat.com/assets/images/base-octocat.svg)
+
+# Lists
+Use - or * to start a list
+
+- Item1
+- Item2
+
+* Item1
+* Item2
+
+1. Item1
+2. Item2
+3. Item3
+   - Sub-item1
+   - Sub-Item2
+
+- [ ] Checkbox1
+- [ ] Checkbox2
+
