@@ -1,0 +1,38 @@
+name: Calculator
+
+on:
+  workflow_dispatch:
+    inputs:
+      first:
+        description: 'First number'
+        required: true
+        type: number
+      second:
+        description: 'Second number'
+        required: true
+        type: number
+      operator:
+        description: 'Operator'
+        required: true
+        type: string
+        default: '+'
+
+jobs:
+
+  sum:
+    runs-on: ubuntu-latest
+    environment: github-dev
+    outputs:
+      result: ${{ steps.sum.outputs.result }}
+    steps:
+      - name: Sum
+        id: sum
+        run: |
+          echo "result=$((${{ github.event.inputs.first }} ${{ github.event.inputs.operator }} ${{ github.event.inputs.second }}))" >> $GITHUB_OUTPUT
+
+  print:
+    needs: sum
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo ${{ needs.sum.outputs.result }}
