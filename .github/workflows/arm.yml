@@ -1,1 +1,15 @@
-arm
+# Create a GitHub Workflow to test the cpu architecture type
+# https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+name: ARM
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get CPU architecture type
+        id: arch
+        run: echo "::set-output name=type::$(uname -m)"
+      - name: Display CPU architecture type
+        run: echo "CPU architecture type is ${{ steps.arch.outputs.type }}"
