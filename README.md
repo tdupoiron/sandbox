@@ -26,7 +26,8 @@
 │   docker/             ──▶  Container build definitions      │
 │   .devcontainer/      ──▶  Reproducible dev environment     │
 │   markdown/           ──▶  Scratch notes & docs             │
-│   index.html          ──▶  Static demo page                 │
+│   index.html          ──▶  Western-themed project site      │
+│   assets/             ──▶  Hand-drawn SVG artwork           │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```

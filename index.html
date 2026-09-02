@@ -5,185 +5,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Sandbox is a hands-on playground for GitHub Actions, containers, and deployment experiments."
+      content="Sandbox is a wide-open playground for GitHub Actions, containers, and deployment experiments."
     >
-    <meta name="theme-color" content="#080b10">
-    <title>Sandbox — Build. Break. Learn.</title>
+    <meta name="theme-color" content="#2b1a0e">
+    <title>Sandbox — Ride. Wrangle. Ship It.</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rye&family=Smokum&family=Special+Elite&family=Bitter:ital,wght@0,400;0,600;0,800;1,400&display=swap"
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="styles.css">
+    <script>
+      // Reveal animations only apply when scripting is available.
+      document.documentElement.classList.add("js");
+    </script>
     <script src="script.js" defer></script>
   </head>
+
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
 
-    <div class="noise" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="#" aria-label="Sandbox home">
-        <span class="brand-mark" aria-hidden="true">S_</span>
-        <span>SANDBOX</span>
+        <span class="ico ico-hat brand-hat" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>SANDBOX</strong>
+          <em>Est. Territory of Main</em>
+        </span>
       </a>
+
       <nav aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#workflows">Workflows</a>
-        <a href="#start">Get started</a>
+        <a href="#about">The Outpost</a>
+        <a href="#supplies">Supplies</a>
+        <a href="#workflows">The Posse</a>
+        <a href="#start">Saddle Up</a>
       </nav>
+
       <a
-        class="button button-small button-ghost"
+        class="button button-ghost"
         href="https://github.com/tdupoiron/sandbox"
         target="_blank"
         rel="noreferrer"
       >
-        View on GitHub
-        <span aria-hidden="true">↗</span>
+        Ride to GitHub <span aria-hidden="true">→</span>
       </a>
     </header>
 
     <main id="main">
       <section class="hero">
-        <div class="hero-grid" aria-hidden="true"></div>
+        <img class="hero-scene" src="assets/hero-desert.svg" alt="" aria-hidden="true">
+        <div class="hero-shade" aria-hidden="true"></div>
+
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> Experimentation environment</p>
-          <h1>
-            BUILD.<br>
-            BREAK.<br>
-            <span>LEARN.</span>
-          </h1>
-          <p class="hero-intro">
-            A practical playground for GitHub Actions, container workflows,
-            deployment strategies, and everything worth testing twice.
+          <p class="eyebrow">
+            <span class="ico ico-badge" aria-hidden="true"></span>
+            Open range for code
           </p>
+
+          <h1>
+            <span class="line-1">RIDE.</span>
+            <span class="line-2">WRANGLE.</span>
+            <span class="line-3">SHIP IT.</span>
+          </h1>
+
+          <p class="hero-intro">
+            Howdy, partner. This here's a no-fences testing ground for
+            GitHub Actions, container builds, and deployment trails —
+            where a busted pipeline costs you nothin' but daylight.
+          </p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#start">Explore the repo <span>↓</span></a>
+            <a class="button button-primary" href="#start">Mosey on in <span aria-hidden="true">→</span></a>
             <a
               class="text-link"
               href="https://github.com/tdupoiron/sandbox/actions"
               target="_blank"
               rel="noreferrer"
             >
-              See Actions runs <span>↗</span>
+              Watch the trail runs <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
 
-        <div class="terminal reveal" aria-label="Repository overview">
-          <div class="terminal-bar">
-            <div class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-            <span>sandbox — zsh</span>
-            <span>⌘1</span>
+        <div class="telegram reveal" aria-label="Repository layout">
+          <div class="telegram-head">
+            <span>WESTERN UNION ★ TELEGRAM</span>
+            <span>NO. 07</span>
           </div>
-          <div class="terminal-body">
-            <p><span class="prompt">➜</span> <span class="path">~/sandbox</span> tree -L 2</p>
-            <div class="tree" aria-hidden="true">
+          <div class="telegram-body">
+            <p class="telegram-meta">TO: ANY RIDER PASSIN' THROUGH — STOP</p>
+            <p><span class="prompt">$</span> tree -L 2 ~/sandbox</p>
+            <div class="tree">
               <p>.</p>
-              <p>├── <b>.github/workflows/</b></p>
-              <p>│&nbsp;&nbsp; ├── arm.yml</p>
+              <p>├── <b>.github/workflows/</b> <i>— the posse</i></p>
+              <p>│&nbsp;&nbsp; ├── static.yml</p>
               <p>│&nbsp;&nbsp; ├── deploy.yml</p>
-              <p>│&nbsp;&nbsp; └── static.yml</p>
-              <p>├── <b>.devcontainer/</b></p>
-              <p>├── <b>docker/</b></p>
-              <p>├── index.html</p>
-              <p>└── README.md</p>
+              <p>│&nbsp;&nbsp; └── arm.yml</p>
+              <p>├── <b>docker/</b> <i>— the chuckwagon</i></p>
+              <p>├── <b>.devcontainer/</b> <i>— the bunkhouse</i></p>
+              <p>└── index.html <i>— this saloon</i></p>
             </div>
-            <p><span class="prompt">➜</span> <span class="path">~/sandbox</span> <span class="cursor">_</span></p>
+            <p><span class="prompt">$</span> <span class="cursor">▊</span></p>
+            <p class="telegram-meta">END OF WIRE — STOP</p>
           </div>
         </div>
 
-        <p class="hero-index" aria-hidden="true">01 / 04</p>
+        <p class="hero-index" aria-hidden="true">★ MILE 01 OF 04 ★</p>
       </section>
 
-      <section class="manifesto section" id="about">
+      <div class="rope-divider" aria-hidden="true"></div>
+
+      <section class="poster-section section" id="about">
         <div class="section-label reveal">
           <span>01</span>
-          <p>Why this exists</p>
+          <p>Why this outpost stands</p>
         </div>
-        <div class="manifesto-content reveal">
-          <p class="kicker">Small repo.<br><em>Big test bench.</em></p>
-          <p>
-            Sandbox is a living lab for trying ideas before they reach production.
-            It keeps CI/CD experiments, container definitions, and deployment
-            prototypes in one intentionally low-stakes place.
-          </p>
+
+        <div class="poster-grid">
+          <article class="poster reveal">
+            <p class="poster-top">★ BY ORDER OF THE MAINTAINER ★</p>
+            <h2 class="poster-title">WANTED</h2>
+            <p class="poster-sub">— Dead Simple or Alive —</p>
+            <span class="poster-portrait"><span class="ico ico-skull" aria-hidden="true"></span></span>
+            <p class="poster-name">"THE BROKEN BUILD"</p>
+            <dl class="poster-facts">
+              <div><dt>Last seen</dt><dd>Failing on main</dd></div>
+              <div><dt>Crimes</dt><dd>Flaky steps, bad YAML</dd></div>
+              <div><dt>Reward</dt><dd>One green check ✓</dd></div>
+            </dl>
+            <p class="poster-foot">CAPTURE ALIVE IF POSSIBLE — TEST IT HERE FIRST</p>
+          </article>
+
+          <div class="poster-copy reveal">
+            <p class="kicker">Small spread.<br><em>Wide open range.</em></p>
+            <p>
+              Sandbox is a livin' proving ground for ideas that ain't ready
+              for the big herd yet. CI/CD experiments, container recipes,
+              and deployment prototypes all get corralled in one place
+              where breakin' things is the whole point.
+            </p>
+            <ul class="tally">
+              <li><strong>7</strong><span>Workflows ridin'</span></li>
+              <li><strong>0</strong><span>Fences to climb</span></li>
+              <li><strong>∞</strong><span>Second chances</span></li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="features section" aria-labelledby="features-title">
+      <section class="supplies section" id="supplies" aria-labelledby="supplies-title">
         <div class="section-heading reveal">
           <div>
-            <span class="overline">Inside the sandbox</span>
-            <h2 id="features-title">TOOLS FOR<br>THE <em>CURIOUS.</em></h2>
+            <span class="overline">★ Provisions for the trail ★</span>
+            <h2 id="supplies-title">WHAT'S IN THE <em>SADDLEBAG</em></h2>
           </div>
-          <p>Each directory is a focused area for exploring a different part of the developer workflow.</p>
+          <p>Every corner of this here spread is stocked for a different stretch of the developer trail.</p>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <span class="card-number">01</span>
-            <div class="card-icon" aria-hidden="true">⌁</div>
-            <h3>GitHub Actions</h3>
-            <p>Workflow dispatches, event triggers, architecture checks, and deployment automation.</p>
+        <div class="supply-grid">
+          <article class="supply-card reveal">
+            <span class="card-number">No. 01</span>
+            <span class="ico ico-badge card-art" aria-hidden="true"></span>
+            <h3>The Posse</h3>
+            <p>Workflow dispatches, event triggers, runner checks, and deployment automation ridin' on command.</p>
             <code>.github/workflows/</code>
           </article>
-          <article class="feature-card reveal">
-            <span class="card-number">02</span>
-            <div class="card-icon" aria-hidden="true">◇</div>
-            <h3>Containers</h3>
-            <p>Minimal Docker definitions for testing image builds, registries, and runtime behavior.</p>
+
+          <article class="supply-card reveal">
+            <span class="card-number">No. 02</span>
+            <span class="ico ico-horseshoe card-art" aria-hidden="true"></span>
+            <h3>The Chuckwagon</h3>
+            <p>Lean Docker recipes for testin' image builds, registries, and how a container behaves on the range.</p>
             <code>docker/</code>
           </article>
-          <article class="feature-card reveal">
-            <span class="card-number">03</span>
-            <div class="card-icon" aria-hidden="true">⌘</div>
-            <h3>Dev environments</h3>
-            <p>A reproducible Dev Container setup with GitHub Copilot ready to go.</p>
+
+          <article class="supply-card reveal">
+            <span class="card-number">No. 03</span>
+            <span class="ico ico-cactus card-art" aria-hidden="true"></span>
+            <h3>The Bunkhouse</h3>
+            <p>A reproducible Dev Container with GitHub Copilot saddled and ready before you set foot inside.</p>
             <code>.devcontainer/</code>
           </article>
         </div>
       </section>
 
       <section class="workflows section" id="workflows">
+        <span class="ico ico-cactus workflow-cactus" aria-hidden="true"></span>
+
         <div class="section-label light reveal">
           <span>02</span>
-          <p>Automation catalogue</p>
+          <p>Round up the automation</p>
         </div>
+
         <div class="workflow-header reveal">
-          <h2>SEVEN WAYS<br>TO PRESS <em>GO.</em></h2>
-          <p>Purpose-built workflows demonstrate different triggers, runners, and deployment targets.</p>
+          <h2>SEVEN RIDERS,<br>ONE <em>TRAIL BOSS</em></h2>
+          <p>Each workflow shows off a different trigger, runner, or destination down the line.</p>
         </div>
 
         <div class="workflow-list reveal">
           <a href="https://github.com/tdupoiron/sandbox/actions/workflows/static.yml" target="_blank" rel="noreferrer">
             <span class="workflow-id">01</span>
             <strong>Static Pages</strong>
-            <span>Deploy this site to GitHub Pages</span>
+            <span class="workflow-desc">Posts this saloon up on GitHub Pages</span>
             <code>push → main</code>
-            <b aria-hidden="true">↗</b>
+            <b aria-hidden="true">→</b>
           </a>
           <a href="https://github.com/tdupoiron/sandbox/actions/workflows/deploy.yml" target="_blank" rel="noreferrer">
             <span class="workflow-id">02</span>
-            <strong>Azure deploy</strong>
-            <span>Build and publish a container image</span>
+            <strong>Azure Deploy</strong>
+            <span class="workflow-desc">Brands a container and drives it to the registry</span>
             <code>PR label</code>
-            <b aria-hidden="true">↗</b>
+            <b aria-hidden="true">→</b>
           </a>
           <a href="https://github.com/tdupoiron/sandbox/actions/workflows/docker.yml" target="_blank" rel="noreferrer">
             <span class="workflow-id">03</span>
             <strong>Docker</strong>
-            <span>Run a containerized action</span>
+            <span class="workflow-desc">Runs a containerized action from the chuckwagon</span>
             <code>manual</code>
-            <b aria-hidden="true">↗</b>
+            <b aria-hidden="true">→</b>
           </a>
           <a href="https://github.com/tdupoiron/sandbox/actions/workflows/arm.yml" target="_blank" rel="noreferrer">
             <span class="workflow-id">04</span>
             <strong>ARM</strong>
-            <span>Inspect runner CPU architecture</span>
+            <span class="workflow-desc">Checks what horse the runner rode in on</span>
             <code>push / PR</code>
-            <b aria-hidden="true">↗</b>
+            <b aria-hidden="true">→</b>
           </a>
           <a href="https://github.com/tdupoiron/sandbox/actions" target="_blank" rel="noreferrer">
             <span class="workflow-id">05—07</span>
-            <strong>Workflow demos</strong>
-            <span>Inputs, scripts, and dispatch experiments</span>
+            <strong>Trail Demos</strong>
+            <span class="workflow-desc">Inputs, scripts, and dispatch experiments</span>
             <code>manual</code>
-            <b aria-hidden="true">↗</b>
+            <b aria-hidden="true">→</b>
           </a>
         </div>
       </section>
@@ -191,31 +248,34 @@
       <section class="start section" id="start">
         <div class="section-label reveal">
           <span>03</span>
-          <p>Run it yourself</p>
+          <p>Rustle up your own copy</p>
         </div>
+
         <div class="start-grid">
           <div class="start-copy reveal">
-            <h2>CLONE.<br>TINKER.<br><em>REPEAT.</em></h2>
-            <p>No elaborate setup. Clone the repository, open it in your environment of choice, and start experimenting.</p>
+            <h2>CLONE IT.<br>TINKER.<br><em>Ride again.</em></h2>
+            <p>
+              No permits, no paperwork, no trail fees. Pull it down,
+              open it wherever you hang your hat, and start experimentin'.
+            </p>
             <a
               class="button button-dark"
               href="https://github.com/tdupoiron/sandbox"
               target="_blank"
               rel="noreferrer"
             >
-              Open repository <span>↗</span>
+              Open the repository <span aria-hidden="true">→</span>
             </a>
+            <span class="ico ico-boot start-boot" aria-hidden="true"></span>
           </div>
 
           <div class="code-panel reveal">
             <div class="code-tabs" role="tablist" aria-label="Setup options">
               <button class="active" role="tab" aria-selected="true" data-command="clone">Clone</button>
-              <button role="tab" aria-selected="false" data-command="docker">Docker</button>
-              <button class="copy-button" type="button" aria-label="Copy command">
-                <span>Copy</span>
-              </button>
+              <button role="tab" aria-selected="false" data-command="docker">Chuckwagon</button>
+              <button class="copy-button" type="button" aria-label="Copy command"><span>Copy</span></button>
             </div>
-            <pre><code id="setup-command"><span class="comment"># Get the repository</span>
+            <pre><code id="setup-command"><span class="comment"># Round up the repository</span>
 git clone https://github.com/tdupoiron/sandbox.git
 cd sandbox</code></pre>
           </div>
@@ -224,28 +284,33 @@ cd sandbox</code></pre>
 
       <section class="cta">
         <div class="cta-track" aria-hidden="true">
-          <span>KEEP EXPERIMENTING ◆ KEEP SHIPPING ◆ KEEP LEARNING ◆&nbsp;</span>
-          <span>KEEP EXPERIMENTING ◆ KEEP SHIPPING ◆ KEEP LEARNING ◆&nbsp;</span>
+          <span>YEEHAW ★ SHIP IT ★ BREAK IT ★ FIX IT ★ RIDE ON ★&nbsp;</span>
+          <span>YEEHAW ★ SHIP IT ★ BREAK IT ★ FIX IT ★ RIDE ON ★&nbsp;</span>
         </div>
+
         <div class="cta-inner reveal">
-          <p>Ready to try something?</p>
-          <h2>THE SANDBOX<br>IS <em>OPEN.</em></h2>
+          <span class="ico ico-horseshoe cta-shoe" aria-hidden="true"></span>
+          <p>Luck favors the ones who test first</p>
+          <h2>THE GATE'S<br><em>Wide Open</em></h2>
           <a
             class="button button-primary"
             href="https://github.com/tdupoiron/sandbox"
             target="_blank"
             rel="noreferrer"
           >
-            Start exploring <span>↗</span>
+            Start explorin' <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>
     </main>
 
     <footer>
-      <a class="brand" href="#" aria-label="Back to top"><span class="brand-mark">S_</span><span>SANDBOX</span></a>
-      <p>Built for experiments. Deployed with GitHub Pages.</p>
-      <p>© <span id="year">2026</span></p>
+      <a class="brand" href="#" aria-label="Back to top">
+        <span class="ico ico-hat brand-hat brand-hat-sm" aria-hidden="true"></span>
+        <span class="brand-text"><strong>SANDBOX</strong></span>
+      </a>
+      <p>Built for experiments · Deployed with GitHub Pages</p>
+      <p>© <span id="year">2026</span> — Happy trails</p>
     </footer>
   </body>
 </html>

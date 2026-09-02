@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="presentation">
+  <defs>
+    <mask id="shoe-cut">
+      <rect width="64" height="64" fill="#fff"/>
+      <g fill="#000">
+        <circle cx="15" cy="47" r="2.1"/>
+        <circle cx="49" cy="47" r="2.1"/>
+        <circle cx="15.9" cy="36" r="2.1"/>
+        <circle cx="48.1" cy="36" r="2.1"/>
+        <circle cx="21.4" cy="24.4" r="2.1"/>
+        <circle cx="42.6" cy="24.4" r="2.1"/>
+      </g>
+    </mask>
+  </defs>
+
+  <g mask="url(#shoe-cut)">
+    <path fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"
+          d="M15 54 V34a17 17 0 0 1 34 0v20"/>
+  </g>
+</svg>

@@ -1,8 +1,8 @@
 const commands = {
-  clone: `<span class="comment"># Get the repository</span>
+  clone: `<span class="comment"># Round up the repository</span>
 git clone https://github.com/tdupoiron/sandbox.git
 cd sandbox`,
-  docker: `<span class="comment"># Build the example container</span>
+  docker: `<span class="comment"># Fire up the chuckwagon</span>
 docker build -f docker/Dockerfile -t sandbox .
 docker run --rm sandbox`,
 };
@@ -15,6 +15,7 @@ const plainCommands = {
 const tabs = document.querySelectorAll("[data-command]");
 const commandBlock = document.querySelector("#setup-command");
 const copyButton = document.querySelector(".copy-button");
+const copyLabel = copyButton.querySelector("span");
 let activeCommand = "clone";
 
 tabs.forEach((tab) => {
@@ -33,13 +34,14 @@ tabs.forEach((tab) => {
 copyButton.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(plainCommands[activeCommand]);
-    copyButton.querySelector("span").textContent = "Copied!";
-    window.setTimeout(() => {
-      copyButton.querySelector("span").textContent = "Copy";
-    }, 1600);
+    copyLabel.textContent = "Lassoed!";
   } catch {
-    copyButton.querySelector("span").textContent = "Select text";
+    copyLabel.textContent = "Select text";
   }
+
+  window.setTimeout(() => {
+    copyLabel.textContent = "Copy";
+  }, 1600);
 });
 
 const observer = new IntersectionObserver(
