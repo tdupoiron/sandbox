@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Desert sunset with mesas and cacti">
+  <defs>
+    <linearGradient id="sky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="620">
+      <stop offset="0" stop-color="#160d07"/>
+      <stop offset="0.35" stop-color="#3d1a0d"/>
+      <stop offset="0.62" stop-color="#7d3013"/>
+      <stop offset="0.85" stop-color="#b5461f"/>
+      <stop offset="1" stop-color="#d1651f"/>
+    </linearGradient>
+    <linearGradient id="sun" gradientUnits="userSpaceOnUse" x1="0" y1="120" x2="0" y2="545">
+      <stop offset="0" stop-color="#ffe08a"/>
+      <stop offset="0.45" stop-color="#f7a83a"/>
+      <stop offset="1" stop-color="#e2551a"/>
+    </linearGradient>
+    <linearGradient id="ground" gradientUnits="userSpaceOnUse" x1="0" y1="468" x2="0" y2="620">
+      <stop offset="0" stop-color="#5a2d12"/>
+      <stop offset="0.45" stop-color="#33190a"/>
+      <stop offset="1" stop-color="#1c1007"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#sky)"/>
+
+  <g opacity="0.85">
+    <circle cx="150" cy="90" r="2.2" fill="#ffe9c4"/>
+    <circle cx="320" cy="52" r="1.6" fill="#ffe9c4"/>
+    <circle cx="520" cy="104" r="1.8" fill="#ffe9c4"/>
+    <circle cx="880" cy="64" r="2" fill="#ffe9c4"/>
+    <circle cx="1040" cy="126" r="1.5" fill="#ffe9c4"/>
+    <circle cx="700" cy="38" r="1.7" fill="#ffe9c4"/>
+  </g>
+
+  <circle cx="600" cy="332" r="212" fill="url(#sun)"/>
+
+  <g fill="url(#sky)">
+    <rect x="330" y="300" width="540" height="7"/>
+    <rect x="330" y="331" width="540" height="11"/>
+    <rect x="330" y="366" width="540" height="15"/>
+    <rect x="330" y="405" width="540" height="20"/>
+    <rect x="330" y="449" width="540" height="26"/>
+    <rect x="330" y="499" width="540" height="34"/>
+  </g>
+
+  <g fill="#c2762c" opacity="0.55">
+    <path d="M120 452 L188 372 L268 372 L300 404 L392 404 L430 452 Z"/>
+    <path d="M812 452 L852 396 L936 396 L968 420 L1052 420 L1088 452 Z"/>
+  </g>
+
+  <g fill="#2b1a0e">
+    <path d="M0 470 L0 398 L74 398 L96 372 L214 372 L232 400 L318 400 L340 470 Z"/>
+    <path d="M876 470 L900 352 L1000 352 L1022 382 L1116 382 L1140 470 Z"/>
+  </g>
+
+  <g stroke="#1c1108" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M150 96 q 9 -7 18 0 q 9 -7 18 0"/>
+    <path d="M226 138 q 7 -5 14 0 q 7 -5 14 0"/>
+    <path d="M980 112 q 8 -6 16 0 q 8 -6 16 0"/>
+  </g>
+
+  <path d="M0 468 H1200 V620 H0 Z" fill="url(#ground)"/>
+
+  <g stroke="#140c06" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <g stroke-width="15">
+      <path d="M182 474 V366"/>
+      <path d="M182 418 H146 V378"/>
+      <path d="M182 400 H219 V372"/>
+    </g>
+    <g stroke-width="10">
+      <path d="M1016 474 V404"/>
+      <path d="M1016 442 H992 V416"/>
+      <path d="M1016 430 H1042 V410"/>
+    </g>
+    <g stroke-width="7">
+      <path d="M392 474 V428"/>
+      <path d="M392 452 H375 V434"/>
+    </g>
+  </g>
+
+  <path d="M0 486 q 260 -30 520 4 q 300 40 680 -14 V620 H0 Z" fill="#1a0f07"/>
+
+  <g fill="#120b05" opacity="0.55">
+    <ellipse cx="520" cy="596" rx="150" ry="10"/>
+    <ellipse cx="900" cy="566" rx="90" ry="7"/>
+  </g>
+</svg>

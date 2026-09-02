@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Saguaro cactus">
+  <g fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 56 V16"/>
+    <path d="M32 40 H20 V28"/>
+    <path d="M32 33 H45 V23"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".45">
+    <path d="M32 22 V50"/>
+    <path d="M20 32 V37"/>
+    <path d="M45 27 V31"/>
+  </g>
+</svg>
