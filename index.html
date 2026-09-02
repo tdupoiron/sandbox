@@ -1,2 +1,251 @@
-Welcome to my webpage.
-This is a demo page.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Sandbox is a hands-on playground for GitHub Actions, containers, and deployment experiments."
+    >
+    <meta name="theme-color" content="#080b10">
+    <title>Sandbox — Build. Break. Learn.</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Sandbox home">
+        <span class="brand-mark" aria-hidden="true">S_</span>
+        <span>SANDBOX</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#start">Get started</a>
+      </nav>
+      <a
+        class="button button-small button-ghost"
+        href="https://github.com/tdupoiron/sandbox"
+        target="_blank"
+        rel="noreferrer"
+      >
+        View on GitHub
+        <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Experimentation environment</p>
+          <h1>
+            BUILD.<br>
+            BREAK.<br>
+            <span>LEARN.</span>
+          </h1>
+          <p class="hero-intro">
+            A practical playground for GitHub Actions, container workflows,
+            deployment strategies, and everything worth testing twice.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#start">Explore the repo <span>↓</span></a>
+            <a
+              class="text-link"
+              href="https://github.com/tdupoiron/sandbox/actions"
+              target="_blank"
+              rel="noreferrer"
+            >
+              See Actions runs <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="terminal reveal" aria-label="Repository overview">
+          <div class="terminal-bar">
+            <div class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span>sandbox — zsh</span>
+            <span>⌘1</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">➜</span> <span class="path">~/sandbox</span> tree -L 2</p>
+            <div class="tree" aria-hidden="true">
+              <p>.</p>
+              <p>├── <b>.github/workflows/</b></p>
+              <p>│&nbsp;&nbsp; ├── arm.yml</p>
+              <p>│&nbsp;&nbsp; ├── deploy.yml</p>
+              <p>│&nbsp;&nbsp; └── static.yml</p>
+              <p>├── <b>.devcontainer/</b></p>
+              <p>├── <b>docker/</b></p>
+              <p>├── index.html</p>
+              <p>└── README.md</p>
+            </div>
+            <p><span class="prompt">➜</span> <span class="path">~/sandbox</span> <span class="cursor">_</span></p>
+          </div>
+        </div>
+
+        <p class="hero-index" aria-hidden="true">01 / 04</p>
+      </section>
+
+      <section class="manifesto section" id="about">
+        <div class="section-label reveal">
+          <span>01</span>
+          <p>Why this exists</p>
+        </div>
+        <div class="manifesto-content reveal">
+          <p class="kicker">Small repo.<br><em>Big test bench.</em></p>
+          <p>
+            Sandbox is a living lab for trying ideas before they reach production.
+            It keeps CI/CD experiments, container definitions, and deployment
+            prototypes in one intentionally low-stakes place.
+          </p>
+        </div>
+      </section>
+
+      <section class="features section" aria-labelledby="features-title">
+        <div class="section-heading reveal">
+          <div>
+            <span class="overline">Inside the sandbox</span>
+            <h2 id="features-title">TOOLS FOR<br>THE <em>CURIOUS.</em></h2>
+          </div>
+          <p>Each directory is a focused area for exploring a different part of the developer workflow.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="card-number">01</span>
+            <div class="card-icon" aria-hidden="true">⌁</div>
+            <h3>GitHub Actions</h3>
+            <p>Workflow dispatches, event triggers, architecture checks, and deployment automation.</p>
+            <code>.github/workflows/</code>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-number">02</span>
+            <div class="card-icon" aria-hidden="true">◇</div>
+            <h3>Containers</h3>
+            <p>Minimal Docker definitions for testing image builds, registries, and runtime behavior.</p>
+            <code>docker/</code>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-number">03</span>
+            <div class="card-icon" aria-hidden="true">⌘</div>
+            <h3>Dev environments</h3>
+            <p>A reproducible Dev Container setup with GitHub Copilot ready to go.</p>
+            <code>.devcontainer/</code>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflows section" id="workflows">
+        <div class="section-label light reveal">
+          <span>02</span>
+          <p>Automation catalogue</p>
+        </div>
+        <div class="workflow-header reveal">
+          <h2>SEVEN WAYS<br>TO PRESS <em>GO.</em></h2>
+          <p>Purpose-built workflows demonstrate different triggers, runners, and deployment targets.</p>
+        </div>
+
+        <div class="workflow-list reveal">
+          <a href="https://github.com/tdupoiron/sandbox/actions/workflows/static.yml" target="_blank" rel="noreferrer">
+            <span class="workflow-id">01</span>
+            <strong>Static Pages</strong>
+            <span>Deploy this site to GitHub Pages</span>
+            <code>push → main</code>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a href="https://github.com/tdupoiron/sandbox/actions/workflows/deploy.yml" target="_blank" rel="noreferrer">
+            <span class="workflow-id">02</span>
+            <strong>Azure deploy</strong>
+            <span>Build and publish a container image</span>
+            <code>PR label</code>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a href="https://github.com/tdupoiron/sandbox/actions/workflows/docker.yml" target="_blank" rel="noreferrer">
+            <span class="workflow-id">03</span>
+            <strong>Docker</strong>
+            <span>Run a containerized action</span>
+            <code>manual</code>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a href="https://github.com/tdupoiron/sandbox/actions/workflows/arm.yml" target="_blank" rel="noreferrer">
+            <span class="workflow-id">04</span>
+            <strong>ARM</strong>
+            <span>Inspect runner CPU architecture</span>
+            <code>push / PR</code>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a href="https://github.com/tdupoiron/sandbox/actions" target="_blank" rel="noreferrer">
+            <span class="workflow-id">05—07</span>
+            <strong>Workflow demos</strong>
+            <span>Inputs, scripts, and dispatch experiments</span>
+            <code>manual</code>
+            <b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </section>
+
+      <section class="start section" id="start">
+        <div class="section-label reveal">
+          <span>03</span>
+          <p>Run it yourself</p>
+        </div>
+        <div class="start-grid">
+          <div class="start-copy reveal">
+            <h2>CLONE.<br>TINKER.<br><em>REPEAT.</em></h2>
+            <p>No elaborate setup. Clone the repository, open it in your environment of choice, and start experimenting.</p>
+            <a
+              class="button button-dark"
+              href="https://github.com/tdupoiron/sandbox"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open repository <span>↗</span>
+            </a>
+          </div>
+
+          <div class="code-panel reveal">
+            <div class="code-tabs" role="tablist" aria-label="Setup options">
+              <button class="active" role="tab" aria-selected="true" data-command="clone">Clone</button>
+              <button role="tab" aria-selected="false" data-command="docker">Docker</button>
+              <button class="copy-button" type="button" aria-label="Copy command">
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code id="setup-command"><span class="comment"># Get the repository</span>
+git clone https://github.com/tdupoiron/sandbox.git
+cd sandbox</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="cta-track" aria-hidden="true">
+          <span>KEEP EXPERIMENTING ◆ KEEP SHIPPING ◆ KEEP LEARNING ◆&nbsp;</span>
+          <span>KEEP EXPERIMENTING ◆ KEEP SHIPPING ◆ KEEP LEARNING ◆&nbsp;</span>
+        </div>
+        <div class="cta-inner reveal">
+          <p>Ready to try something?</p>
+          <h2>THE SANDBOX<br>IS <em>OPEN.</em></h2>
+          <a
+            class="button button-primary"
+            href="https://github.com/tdupoiron/sandbox"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Start exploring <span>↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#" aria-label="Back to top"><span class="brand-mark">S_</span><span>SANDBOX</span></a>
+      <p>Built for experiments. Deployed with GitHub Pages.</p>
+      <p>© <span id="year">2026</span></p>
+    </footer>
+  </body>
+</html>
