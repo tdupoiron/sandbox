@@ -1,0 +1,5 @@
+i want you to create a static webpage to describe this repo and deploy it as a github pages
+
+---
+
+that's great. can you change a little the theme to make it more around cowboys ? add all the fonts, images, style

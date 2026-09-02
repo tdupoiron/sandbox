@@ -1,0 +1,65 @@
+{
+  "cli_version": "0.10.3",
+  "checkpoint_id": "01M1H04DG6NH4ZY9DQFA6GVC5D",
+  "session_id": "830f8648-6059-4083-97ca-f74fc487100c",
+  "strategy": "manual-commit",
+  "created_at": "2026-09-02T12:05:08.148015Z",
+  "branch": "copilot/western-theme",
+  "checkpoints_count": 1,
+  "files_touched": [
+    ".github/workflows/static.yml",
+    "README.md",
+    "assets/badge.svg",
+    "assets/boot.svg",
+    "assets/cactus.svg",
+    "assets/favicon.svg",
+    "assets/hat.svg",
+    "assets/hero-desert.svg",
+    "assets/horseshoe.svg",
+    "assets/rope.svg",
+    "assets/skull.svg",
+    "index.html",
+    "script.js",
+    "styles.css"
+  ],
+  "agent": "Copilot CLI",
+  "model": "gpt-5.6-sol-fast",
+  "turn_id": "5dfe01076db2",
+  "checkpoint_transcript_start": 231,
+  "transcript_lines_at_start": 231,
+  "compact_transcript_start": 17,
+  "token_usage": {
+    "input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 0,
+    "api_call_count": 0
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-09-02T12:05:08.088931Z",
+    "agent_lines": 1186,
+    "agent_removed": 496,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 1186,
+    "total_lines_changed": 1682,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 61,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".github/hooks/entire.json": 61
+      }
+    }
+  ]
+}
